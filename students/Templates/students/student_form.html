@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+
+<body>
+
+    <h1>BOOK MANAGEMENT SYSTEM</h1>
+    <h2>Add Student Details</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <p>
+            Name:
+            {{ form.name }}
+        </p>
+
+        <p>
+            Email:
+            {{ form.email }}
+        </p>
+
+        <p>
+            Age:
+            {{ form.age }}
+        </p>
+
+        <p>
+            Course:
+            {{ form.course }}
+        </p>
+
+        <button type="submit">Save Student</button>
+    </form>
+
+    <br>
+
+    <a href="{% url 'student_list' %}">
+        Back to Student Records
+    </a>
+
+</body>
+</html>
